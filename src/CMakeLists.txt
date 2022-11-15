@@ -1,5 +1,5 @@
 
-add_library(${OATPP_THIS_MODULE_NAME}
+add_library(${OATPP_THIS_MODULE_NAME} SHARED
         oatpp-openssl/Config.cpp
         oatpp-openssl/Config.hpp
         oatpp-openssl/Connection.cpp
