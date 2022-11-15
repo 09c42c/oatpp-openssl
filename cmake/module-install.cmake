@@ -73,7 +73,7 @@ install(DIRECTORY ${OATPP_DIRS_TO_INSTALL}
 install(EXPORT "${OATPP_MODULE_NAME}Targets"
         FILE "${OATPP_MODULE_NAME}Targets.cmake"
         NAMESPACE oatpp::
-        DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake"
+        DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/${OATPP_MODULE_NAME}"
 )
 
 include(CMakePackageConfigHelpers)
@@ -89,7 +89,7 @@ configure_package_config_file(
             "${CMAKE_CURRENT_LIST_DIR}/module-config.cmake.in"
             "${OATPP_MODULE_NAME}Config.cmake"
         INSTALL_DESTINATION
-            "${CMAKE_INSTALL_LIBDIR}/cmake"
+            "${CMAKE_INSTALL_LIBDIR}/cmake/${OATPP_MODULE_NAME}"
         PATH_VARS
             OATPP_MODULE_NAME
             OATPP_MODULE_VERSION
@@ -103,5 +103,5 @@ install(
             "${CMAKE_CURRENT_BINARY_DIR}/${OATPP_MODULE_NAME}Config.cmake"
             "${CMAKE_CURRENT_BINARY_DIR}/${OATPP_MODULE_NAME}ConfigVersion.cmake"
         DESTINATION
-            "${CMAKE_INSTALL_LIBDIR}/cmake"
+            "${CMAKE_INSTALL_LIBDIR}/cmake/${OATPP_MODULE_NAME}"
 )
